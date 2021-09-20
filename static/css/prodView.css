@@ -1,0 +1,56 @@
+body{
+    background-color:#f7faa9e6;
+}
+.card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13rem;
+    background: radial-gradient(rgba(253, 236, 177, 0.4),rgb(240, 182, 8));
+    position: relative;
+}
+.card img{
+    width: 46%;
+    height: 112px;
+}
+.name{
+    position: absolute;
+    top: 77%;
+    left: 3%;
+}
+.name h5{
+    margin: 0;
+}
+.name p{
+    margin: 0;
+}
+.dropdown{
+    width: 10rem;
+    position: relative;
+}
+.form-floating{
+    margin: 2% 56% 2% 0;
+padding: 0% 0% 0% 2%;
+}
+.head{
+    margin: 8% 6% 2% 5%;
+display: flex;
+}
+
+
+#heading{
+    color:rgb(110, 83, 8);
+    font-weight: bold;
+}
+#sideheading{
+    color:rgb(110, 83, 8);
+    font-weight: bold;   
+}
+#whitespace{
+    background-color: white;
+font-size: 9%;
+
+color: white;
+height: 4px;
+}

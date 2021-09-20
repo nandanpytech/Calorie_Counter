@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        .head{
+            margin: 1% 1% 9% 1%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(rgba(253, 236, 177, 0.4),rgb(240, 182, 8));
+            height: 190px;
+            position: relative;
+        }
+        .head h3{
+            position: absolute;
+            top: 73%;
+            left: 2%;
+            font-weight: bold;
+        }
+        .head p{
+            position: absolute;
+            top: 88%;
+            left: 2%;
+            font-size: 87%;
+            font-weight: bold;
+            
+        }
+        .second{
+            display: flex;
+            margin: 1% 3% 1% 4%;
+        }
+        #qty{
+            flex: 1;
+            font-size: 132%;
+            font-weight: revert;
+        }
+        #selected{
+            font-size: 132%;
+            font-weight: revert;
+        }
+        .third{
+            display: flex;
+            margin-bottom: 10%;
+        }
+        .third p{
+            flex: 1;
+            padding: 3% 1% 1% 20%;
+        }
+        .fourth{
+            position: relative;
+            margin-bottom: 33%;
+        }
+        #add{
+            position: absolute;
+            left: 39%;
+        }
+        #cancel{
+            position: absolute;
+            left: 2%;
+            display: none;
+        }
+        #track{
+            position: absolute;
+            right: 2%;
+            display: none;
+        }
+        #nutrition{
+            color:rgb(110, 83, 8);
+            font-size: 105%;
+            font-weight: bold;
+        }
+        .fifth{
+            margin: 1% 1% 6% 2%;
+        }
+        .sixth{
+            display: flex;
+            margin: 1% -11% 2% 7%;
+        }
+        .sixth p{
+            flex-basis: 25%;
+
+        }
+        .seventh{
+            display: flex;
+            margin: -5% 25% 1% 5%;
+            width: 96%;
+        }
+        .seventh img{
+            flex:1;
+            width: 15%;
+            padding-right: 2%;
+        }
+        .eight{
+            display: flex;
+            margin: 1% -8% 2% 12%;
+        }
+        .eight p{
+            flex-basis: 25%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+        <img src="/media/{{product.image}}" alt="" style="height: 140px;">
+        <h3 id="name">{{product.list_name}}</h3>
+        <p>1- <span id="cal">{{product.Cal}}</span> cal</p>
+            
+    </div>
+    <div class="second">
+        <h3 id="qty">Quantity</h3>
+        <h3 id="selected">Item selected</h3>
+    </div>
+    <div class="third">
+        <div class="form-floating" style="width: 50%;">
+            <input type="text" class="form-control" id="Qty" placeholder="dsfj">
+            <label for="floatingInput">No.of fruit Consumed</label>
+          </div>
+          <p>{{product.list_name}}</p>
+    </div>
+    <div class="fourth">
+        <div id="add" onclick="add()">
+            <button type="button" class="btn btn-primary cart1" id="add{{product.id}}">Add Item</button>
+        </div>
+        <div id="cancel" onclick="cancel()">
+            <button type="button" class="btn btn-primary cart2" id="cancel{{product.id}}">Cancel Item</button>
+        </div>
+        <div id="track">
+            <a href="/"><button type="button" class="btn btn-primary">Track Item</button></a>
+        </div>
+    </div>  
+    <div class="fifth">
+        <p id="nutrition">Nutrional Information:</p>
+    </div>
+    <div class="sixth">
+        <p id="1">Protein</p>
+        <p id="2">Carbs</p>
+        <p id="3">Fat</p>
+        <p id="4">Fiber</p>
+    </div>
+    <div class="seventh">
+        <img src="/static/images/388850.png" alt="">
+        <img src="/static/images/carbs-icon-9.jpg" alt="">
+        <img src="/static/images/R (1).png" alt="">
+        <img src="/static/images/fiber.png" alt="">
+    </div>
+    <div class="eight">
+       <p>{{product.Protein}}</p>
+       <p>{{product.Carb}}</p>
+       <p>{{product.Fat}}</p>
+       <p>{{product.Fiber}}</p>
+    </div>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+  <script>
+      function add(){
+          document.getElementById('add').style.display="none"
+          document.getElementById('cancel').style.display="block"
+          document.getElementById('track').style.display="block"
+          if (localStorage.getItem('cart') == null) {
+            var cart = {};
+            } else {
+            cart = JSON.parse(localStorage.getItem('cart'));
+             }
+            var idstr = document.getElementsByClassName('cart1')[0].id
+            console.log(idstr)
+
+            name=document.getElementById('name').innerHTML
+            qty =document.getElementById('Qty').value
+            itemcal=document.getElementById('cal').innerHTML
+            cart[idstr] = [qty,name,itemcal];
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        
+    
+
+      function cancel(){
+        document.getElementById('add').style.display="block"
+        document.getElementById('cancel').style.display="none"
+        document.getElementById('track').style.display="none"
+        if (localStorage.getItem('cart') == null) {
+            var cart = {};
+            } else {
+            cart = JSON.parse(localStorage.getItem('cart'));
+             }
+             var idstr = document.getElementsByClassName('cart1')[0].id
+
+             name=document.getElementById('name').innerHTML
+             qty = 0
+             itemcal=document.getElementById('cal').innerHTML
+             cart[idstr] = [qty,name,itemcal];
+             localStorage.setItem('cart', JSON.stringify(cart));    
+      }
+
+  </script>
+</html>
+
